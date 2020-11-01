@@ -1,3 +1,16 @@
+<?php
+  include('conexao.php');
+
+  if (isset($_POST['conta']) && isset($_POST['valor']) && isset($_POST['vencimento'])) {
+    $conta = $_POST['conta'];
+    $valor = $_POST['valor'];
+    $vencimento = $_POST['vencimento'];
+  }
+
+  $sql = "insert into contasfixas (conta, valor, vencimento) values ('$conta', '$valor', '$vencimento')";
+
+  $conexao->query($sql); ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -14,7 +27,7 @@
     <title>Educa Bolso</title>
   </head>
   <body>
-    <div class="container-fluid vw-100 vh-100">
+    <div class="container-fluid">
       <div class="container-xl w-100 h-100">
         <header class="w-100">
           <a href="#">
@@ -126,21 +139,25 @@
                     </tr>
                   </thead>
                   <tbody>
+                    <?php 
+                      $sql = "select * from contasfixas";
+
+                      $resultado = $conexao->query($sql); if ($resultado->num_rows > 0)
+                            { while($linha = $resultado->fetch_assoc()) { 
+                    ?>
+
                     <tr>
-                      <td>Conta de Luz</td>
-                      <td>R$ 255,00</td>
-                      <td>12/02/2020</td>
+                      <td><?php echo $linha['conta'] ?></td>
+                      <td>R$ <?php echo $linha['valor'] ?></td>
+                      <td><?php echo $linha['vencimento'] ?></td>
                     </tr>
-                    <tr>
-                      <td>Conta de Água</td>
-                      <td>R$ 55,00</td>
-                      <td>18/02/2020</td>
-                    </tr>
-                    <tr>
-                      <td>Conta de Água</td>
-                      <td>R$ 55,00</td>
-                      <td>18/02/2020</td>
-                    </tr>
+
+                    <?php
+
+                }
+              }
+            ?>
+
                   </tbody>
                 </table>
               </div>
