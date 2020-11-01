@@ -1,12 +1,7 @@
 <?php 
-  $localhost = "localhost";
-  $usuario = "root";
-  $senha = "";
-  $database = "educabolso";
+  $connection = mysqli_connect('localhost', 'root', '', 'educabolso');
 
-  $conexao = mysqli_connect($localhost, $usuario, $senha, $database);
-
-  if (!$conexao) {
-    die ("Falha no banco de dados: " . mysqli_connect_error());
+  if (!$connection) {
+    die ("A conexão não foi realizada" . mysqli_connect_error());
   }
 ?>

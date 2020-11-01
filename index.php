@@ -1,15 +1,4 @@
-<?php
-  include('conexao.php');
-
-  if (isset($_POST['conta']) && isset($_POST['valor']) && isset($_POST['vencimento'])) {
-    $conta = $_POST['conta'];
-    $valor = $_POST['valor'];
-    $vencimento = $_POST['vencimento'];
-  }
-
-  $sql = "insert into contasfixas (conta, valor, vencimento) values ('$conta', '$valor', '$vencimento')";
-
-  $conexao->query($sql); ?>
+<?php include('conexao.php') ?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -112,7 +101,7 @@
           <section class="contas-fixas">
             <h4>Contas fixas</h4>
             <hr />
-            <form action="" method="POST">
+            <form action="" method="post">
               <label for="conta">Conta:</label>
               <input type="text" name="conta" id="conta" />
 
@@ -142,14 +131,16 @@
                     <?php 
                       $sql = "select * from contasfixas";
 
-                      $resultado = $conexao->query($sql); if ($resultado->num_rows > 0)
-                            { while($linha = $resultado->fetch_assoc()) { 
+                      $result = $conexao->query($sql); 
+                      
+                      if ($result->num_rows > 0) { 
+                        while($rows = $result->fetch_assoc()) { 
                     ?>
 
                     <tr>
-                      <td><?php echo $linha['conta'] ?></td>
-                      <td>R$ <?php echo $linha['valor'] ?></td>
-                      <td><?php echo $linha['vencimento'] ?></td>
+                      <td><?php echo $rows['conta'] ?></td>
+                      <td>R$ <?php echo $rows['valor'] ?></td>
+                      <td><?php echo $rows['vencimento'] ?></td>
                     </tr>
 
                     <?php
