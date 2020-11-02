@@ -1,3 +1,5 @@
+<?php include('conexao.php') ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -14,7 +16,7 @@
     <title>Educa Bolso</title>
   </head>
   <body>
-    <div class="container-fluid vw-100 vh-100">
+    <div class="container-fluid">
       <div class="container-xl w-100 h-100">
         <div id="header-box">
           <header class="w-100">
@@ -100,7 +102,11 @@
           <section class="contas-fixas">
             <h4>Contas fixas</h4>
             <hr />
+<<<<<<< HEAD:index.html
             <form onsubmit="<?php echo include("cadastro-conta.php") ?>" action="" method="POST">
+=======
+            <form action="" method="post">
+>>>>>>> 8cf99a4af6a7ddae6d2eaebc785da378d70efcc3:index.php
               <label for="conta">Conta:</label>
               <input type="text" name="conta" id="conta" />
 
@@ -127,21 +133,27 @@
                     </tr>
                   </thead>
                   <tbody>
+                    <?php 
+                      $sql = "select * from contasfixas";
+
+                      $result = $conexao->query($sql); 
+                      
+                      if ($result->num_rows > 0) { 
+                        while($rows = $result->fetch_assoc()) { 
+                    ?>
+
                     <tr>
-                      <td>Conta de Luz</td>
-                      <td>R$ 255,00</td>
-                      <td>12/02/2020</td>
+                      <td><?php echo $rows['conta'] ?></td>
+                      <td>R$ <?php echo $rows['valor'] ?></td>
+                      <td><?php echo $rows['vencimento'] ?></td>
                     </tr>
-                    <tr>
-                      <td>Conta de Água</td>
-                      <td>R$ 55,00</td>
-                      <td>18/02/2020</td>
-                    </tr>
-                    <tr>
-                      <td>Conta de Água</td>
-                      <td>R$ 55,00</td>
-                      <td>18/02/2020</td>
-                    </tr>
+
+                    <?php
+
+                }
+              }
+            ?>
+
                   </tbody>
                 </table>
               </div>
