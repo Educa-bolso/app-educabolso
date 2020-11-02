@@ -54,18 +54,20 @@
               </div>
 
               <button id="botao">
-                <img src="./assets/arrow-down.svg" alt="Informações do perfil">
+                <img
+                  src="./assets/arrow-down.svg"
+                  alt="Informações do perfil"
+                />
               </button>
             </div>
           </header>
 
-          <div class="caixa-perfil active">
+          <div class="caixa-perfil">
             <a href="#">Meu perfil</a>
             <a href="#">Minhas conquistas</a>
             <a href="#">Sair</a>
           </div>
         </div>
-        
 
         <main>
           <section class="cards">
@@ -102,11 +104,10 @@
           <section class="contas-fixas">
             <h4>Contas fixas</h4>
             <hr />
-<<<<<<< HEAD:index.html
-            <form onsubmit="<?php echo include("cadastro-conta.php") ?>" action="" method="POST">
-=======
+            <<<<<<< HEAD:index.html <form onsubmit="<?php echo include("cadastro-conta.php") ?>"
+            action="" method="POST"> =======
             <form action="" method="post">
->>>>>>> 8cf99a4af6a7ddae6d2eaebc785da378d70efcc3:index.php
+              >>>>>>> 8cf99a4af6a7ddae6d2eaebc785da378d70efcc3:index.php
               <label for="conta">Conta:</label>
               <input type="text" name="conta" id="conta" />
 
@@ -136,15 +137,15 @@
                     <?php 
                       $sql = "select * from contasfixas";
 
-                      $result = $conexao->query($sql); 
-                      
-                      if ($result->num_rows > 0) { 
-                        while($rows = $result->fetch_assoc()) { 
-                    ?>
+                      $result = $conexao->query($sql); if ($result->num_rows >
+                    0) { while($rows = $result->fetch_assoc()) { ?>
 
                     <tr>
                       <td><?php echo $rows['conta'] ?></td>
-                      <td>R$ <?php echo $rows['valor'] ?></td>
+                      <td>
+                        R$
+                        <?php echo $rows['valor'] ?>
+                      </td>
                       <td><?php echo $rows['vencimento'] ?></td>
                     </tr>
 
@@ -153,7 +154,6 @@
                 }
               }
             ?>
-
                   </tbody>
                 </table>
               </div>
@@ -162,7 +162,6 @@
         </main>
       </div>
     </div>
-
 
     <script src="./scripts/index.js"></script>
   </body>
