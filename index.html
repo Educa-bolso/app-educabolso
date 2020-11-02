@@ -16,53 +16,54 @@
   <body>
     <div class="container-fluid vw-100 vh-100">
       <div class="container-xl w-100 h-100">
-        <header class="w-100">
-          <a href="#">
-            <img src="./assets/menu.svg" alt="Menu" />
-          </a>
-
-          <div class="buscar">
-            <input
-              type="text"
-              name="buscar"
-              id="buscar"
-              placeholder="O que você está procurando?"
-            />
-            <img src="./assets/search.svg" alt="Buscar" />
-          </div>
-
-          <div class="botoes">
+        <div id="header-box">
+          <header class="w-100">
             <a href="#">
-              <img src="./assets/notification.svg" alt="Notificação" />
+              <img src="./assets/menu.svg" alt="Menu" />
             </a>
-            <a href="#">
-              <img src="./assets/chat.svg" alt="Chat" />
-            </a>
-            <a href="#">
-              <img src="./assets/chat.svg" alt="Chat" />
-            </a>
-          </div>
 
-          <div class="minha-conta">
-            <img src="./assets/avatar.jpg" alt="Foto de perfil" />
-            <div class="informacao">
-              <strong>Bia Kim</strong>
-              <span>Gastadora incontrolável</span>
+            <div class="buscar">
+              <input
+                type="text"
+                name="buscar"
+                id="buscar"
+                placeholder="O que você está procurando?"
+              />
+              <img src="./assets/search.svg" alt="Buscar" />
             </div>
 
-            <div class="btn-group">
-              <button
-                type="button"
-                class="dropdown-toggle"
-                data-toggle="dropdown"
-              ></button>
-              <div id="perfil" class="dropdown-menu">
-                <a class="dropdown-item" href="#">Tablet</a>
-                <a class="dropdown-item" href="#">Smartphone</a>
+            <div class="botoes">
+              <a href="#">
+                <img src="./assets/notification.svg" alt="Notificação" />
+              </a>
+              <a href="#">
+                <img src="./assets/chat.svg" alt="Chat" />
+              </a>
+              <a href="#">
+                <img src="./assets/chat.svg" alt="Chat" />
+              </a>
+            </div>
+
+            <div class="minha-conta">
+              <img src="./assets/avatar.jpg" alt="Foto de perfil" />
+              <div class="informacao">
+                <strong>Bia Kim</strong>
+                <span>Gastadora incontrolável</span>
               </div>
+
+              <button id="botao">
+                <img src="./assets/arrow-down.svg" alt="Informações do perfil">
+              </button>
             </div>
+          </header>
+
+          <div class="caixa-perfil active">
+            <a href="#">Meu perfil</a>
+            <a href="#">Minhas conquistas</a>
+            <a href="#">Sair</a>
           </div>
-        </header>
+        </div>
+        
 
         <main>
           <section class="cards">
@@ -99,7 +100,7 @@
           <section class="contas-fixas">
             <h4>Contas fixas</h4>
             <hr />
-            <form action="" method="POST">
+            <form onsubmit="<?php echo include("cadastro-conta.php") ?>" action="" method="POST">
               <label for="conta">Conta:</label>
               <input type="text" name="conta" id="conta" />
 
@@ -149,5 +150,8 @@
         </main>
       </div>
     </div>
+
+
+    <script src="./scripts/index.js"></script>
   </body>
 </html>

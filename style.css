@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,500&family=Roboto+Condensed:wght@400;700&display=swap");
 
+:root {
+  --roxo: #2e2647;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -30,6 +34,11 @@ input {
   padding: 1rem;
 }
 
+#header-box {
+  width: 100%;
+  position: relative;
+}
+
 header {
   width: 100%;
   padding: 8px;
@@ -39,11 +48,51 @@ header {
   align-items: center;
   background-color: #fff;
   border-radius: 0.5rem;
+  vertical-align: center;
 }
 
 header > a img {
   width: 2.5rem;
   height: 2.5rem;
+}
+
+/* === CAIXA PERFIL === */
+.caixa-perfil {
+  width: 20%;
+  height: 10rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 0.5rem;
+
+  position: fixed;
+  z-index: 2;
+  right: 0;
+  top: 10;
+
+  background-color: var(--roxo);
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.caixa-perfil.active {
+  opacity: 1;
+  visibility: initial;
+}
+
+.caixa-perfil a {
+  color: #fff;
+  margin: 0.5rem auto;
+  text-decoration: none;
+  transition: color 500ms;
+}
+
+.caixa-perfil a:hover {
+  color: #7159c1;
 }
 
 .buscar {
