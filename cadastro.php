@@ -30,7 +30,7 @@
 
       $connection->query($sql);
 
-      echo "<script>window.location.href = 'index.php';</script>";
+      echo "<script>window.location.href = 'cadastro-concluido.php';</script>";
 
     }
 

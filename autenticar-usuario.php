@@ -1,13 +1,13 @@
 <?php
+  include('conexao.php');
   session_start();
 
-  include('conexao.php');
 
   if (isset($_POST['email']) && isset($_POST['senha'])) {
     $email = $_POST['email'];
     $senha = md5($_POST['senha']);
 
-    $sql = "select email from usuarios where email = '$email' and senha = '$senha'";
+    $sql = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'";
 
     $result = $connection->query($sql);
 

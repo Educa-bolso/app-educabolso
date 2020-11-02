@@ -15,7 +15,7 @@
         <div class="card">
           <h1>Entre ou cadastre-se</h1>
 
-          <form action="" method="POST">
+          <form action="autenticar-usuario.php" method="POST">
             <input type="text" name="email" placeholder="Email" />
             <input type="password" name="senha" placeholder="Senha" />
 

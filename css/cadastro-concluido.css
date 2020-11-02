@@ -1,0 +1,39 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #a197c5;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info img {
+  width: 20%;
+  margin: 0.4rem auto;
+}
+
+.info h1 {
+  margin: 0 auto 3rem;
+}
+
+.container a {
+  width: 20%;
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  color: #000;
+  font-weight: bold;
+
+  border-radius: 0.5rem;
+  background-color: #3a3768;
+  transition: opacity 700ms;
+}
+
+.container a:hover {
+  opacity: 0.8;
+  color: #fff;
+}
