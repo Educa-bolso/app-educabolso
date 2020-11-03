@@ -13,6 +13,7 @@
 
     $usuarios = mysqli_fetch_all($result);
 
+    $_SESSION['id'] = $usuarios[0][0];
     $_SESSION['nome'] = $usuarios[0][1];
     $_SESSION['email'] = $usuarios[0][2];
     $_SESSION['senha'] = $usuarios[0][3];

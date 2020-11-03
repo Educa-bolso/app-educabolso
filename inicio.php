@@ -8,6 +8,7 @@
     exit;
   }
 
+  $user_id = $_SESSION['id'];
   $nome = $_SESSION['nome'];
 
   if (isset($_POST['conta']) && isset($_POST['valor']) && isset($_POST['vencimento'])) {

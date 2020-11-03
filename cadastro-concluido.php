@@ -10,7 +10,7 @@
   <body>
     <div class="container">
       <div class="info">
-        <img src="./assets/check.svg" alt="Cadastro concluído!" />
+        <img src="./assets/logo.png" alt="Cadastro concluído!" />
         <h1>Cadastro concluído!</h1>
       </div>
 
