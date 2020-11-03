@@ -38,9 +38,8 @@
     <title>Educa Bolso</title>
   </head>
   <body>
-    <div class="container-fluid">
-      <div class="container-xl w-100 h-100">
-        <div id="header-box">
+    <div class="container-fluid vh-100">
+      <div class="container position-relative">
           <header class="w-100">
             <a href="#">
               <img src="./assets/menu.svg" alt="Menu" />
@@ -83,15 +82,16 @@
               </button>
             </div>
           </header>
-
-          <div class="caixa-perfil">
+          <div class="caixa-perfil position-absolute">
             <a href="#">Meu perfil</a>
             <a href="#">Minhas conquistas</a>
             <a href="sair.php">Sair</a>
           </div>
-        </div>
+          
+      </div>
 
-        <main>
+        <main class="container ">
+          
           <section class="cards">
             <div class="card">
               <h3>Quais são as suas contas fixas?</h3>
@@ -179,7 +179,6 @@
             </div>
           </section>
         </main>
-      </div>
     </div>
 
     <script src="./scripts/index.js"></script>

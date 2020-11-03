@@ -34,11 +34,6 @@ input {
   padding: 1rem;
 }
 
-#header-box {
-  width: 100%;
-  position: relative;
-}
-
 header {
   width: 100%;
   padding: 8px;
@@ -57,6 +52,10 @@ header > a img {
 }
 
 /* === CAIXA PERFIL === */
+#conteudo-principal {
+  position: relative;
+}
+
 .caixa-perfil {
   width: 20%;
   height: 10rem;
@@ -71,14 +70,13 @@ header > a img {
   position: fixed;
   z-index: 2;
   right: 0;
-  top: 10;
+  margin-right: 15px;
 
   background-color: var(--roxo);
 
   opacity: 0;
   visibility: hidden;
 }
-
 .caixa-perfil.active {
   opacity: 1;
   visibility: initial;
@@ -105,7 +103,6 @@ header > a img {
 .buscar input {
   width: 100%;
   padding: 4px 8px;
-  border-radius: 0.4rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 }
 
