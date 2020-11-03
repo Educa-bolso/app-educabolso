@@ -56,14 +56,15 @@
             </div>
 
             <div class="botoes">
+            <a href="#">
+                <img style="width: 40px"src="./assets/bate-papo.svg" alt="Chat" />
+              </a>
+             
               <a href="#">
-                <img src="./assets/notification.svg" alt="Notificação" />
+                <img style="width: 40px" src="./assets/nivel.svg" alt="Chat" />
               </a>
               <a href="#">
-                <img src="./assets/chat.svg" alt="Chat" />
-              </a>
-              <a href="#">
-                <img src="./assets/chat.svg" alt="Chat" />
+<img style="width: 40px" src="./assets/notificacao.svg" alt="Notificação" />
               </a>
             </div>
 
