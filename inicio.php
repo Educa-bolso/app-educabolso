@@ -16,7 +16,7 @@
     $valor = $_POST['valor'];
     $vencimento = $_POST['vencimento'];
 
-    $sql = "insert into contasfixas (conta, valor, vencimento) values ('$conta', '$valor', '$vencimento')";
+    $sql = "insert into contasfixas (conta, valor, vencimento, user_id) values ('$conta', '$valor', '$vencimento', $user_id)";
 
     $connection->query($sql);
   }
@@ -41,60 +41,64 @@
     <div class="container-fluid vh-100">
       <div class="container position-relative">
           <header class="w-100">
-            <a href="#">
-              <img src="./assets/menu.svg" alt="Menu" />
-            </a>
+              <div class="col-xl-2">
+                <a href="#">
+                  <img style="width: 80px; height: 80px" src="./assets/logo.png" alt="Menu" />
+                </a>
+              </div>
+              
 
-            <div class="buscar">
-              <input
-                type="text"
-                name="buscar"
-                id="buscar"
-                placeholder="O que você está procurando?"
-              />
-              <img src="./assets/search.svg" alt="Buscar" />
-            </div>
-
-            <div class="botoes">
-            <a href="#">
-                <img style="width: 40px"src="./assets/bate-papo.svg" alt="Chat" />
-              </a>
-             
-              <a href="#">
-                <img style="width: 40px" src="./assets/nivel.svg" alt="Chat" />
-              </a>
-              <a href="#">
-<img style="width: 40px" src="./assets/notificacao.svg" alt="Notificação" />
-              </a>
-            </div>
-
-            <div class="minha-conta">
-              <img src="./assets/avatar.jpg" alt="Foto de perfil" />
-              <div class="informacao">
-                <strong><?php echo $nome ?></strong>
-                <span>Gastadora incontrolável</span>
+              <div class=" buscar d-sm-none d-md-none d-lg-block">
+                <input
+                  type="text"
+                  name="buscar"
+                  id="buscar"
+                  placeholder="O que você está procurando?"
+                />
+                <img src="./assets/search.svg" alt="Buscar" />
               </div>
 
-              <button id="botao">
-                <img
-                  src="./assets/arrow-down.svg"
-                  alt="Informações do perfil"
-                />
-              </button>
-            </div>
+              <div class=" botoes">
+                <a href="#">
+                  <img style="width: 40px"src="./assets/bate-papo.svg" alt="Chat" />
+                </a>
+              
+                <a href="#">
+                  <img style="width: 40px" src="./assets/nivel.svg" alt="Chat" />
+                </a>
+                <a href="#">
+                  <img style="width: 40px" src="./assets/notificacao.svg" alt="Notificação" />
+                </a>
+              </div>
+
+              <div class=" minha-conta">
+                <img src="./assets/avatar.jpg" alt="Foto de perfil" />
+                <div class="informacao">
+                  <strong>Eu</strong>
+                  <button>
+                  <img
+                    src="./assets/arrow-down.svg"
+                    alt="Informações do perfil"
+                  />
+                  </button>
+                </div>
+              </div>
+              
           </header>
+
           <div class="caixa-perfil position-absolute">
+          <span>Gastadora incontrolável</span>
             <a href="#">Meu perfil</a>
             <a href="#">Minhas conquistas</a>
-            <a href="sair.php">Sair</a>
+            <a class="btn btn-danger" href="sair.php">Sair</a>
           </div>
           
       </div>
 
-        <main class="container ">
+        <main class="container mt-4 w-md-12" >
           
-          <section class="cards">
-            <div class="card">
+          <section class="cards row w-100 ml-0">
+            <div class="card col-xl-6 col-lg-6 col-md-12 col-sm-12">
               <h3>Quais são as suas contas fixas?</h3>
 
               <div class="image-card">
@@ -104,8 +108,7 @@
                 />
               </div>
             </div>
-            <div class="card-menores">
-              <div class="card menores">
+              <div class="card menores col-xl-3 col-lg-3 col-md-6 col-sm-6">
                 <h3>Quais seus planos para o futuro?</h3>
                 <div class="image-card">
                   <img
@@ -114,14 +117,14 @@
                   />
                 </div>
               </div>
-              <div class="card menores">
+              <div class="card menores col-xl-3 col-lg-3 col-md-6 col-sm-6">
                 <h3>Aprenda a controlar os seus gastos financeiros!</h3>
 
                 <div class="image-card">
                   <img src="./assets/future.svg" alt="Saiba Mais!" />
                 </div>
               </div>
-            </div>
+              
           </section>
 
           <section class="contas-fixas">
@@ -155,7 +158,7 @@
                   </thead>
                   <tbody>
                     <?php 
-                      $sql = "select * from contasfixas";
+                      $sql = "select * from contasfixas where user_id = '$user_id'";
 
                       $result = $connection->query($sql); 
                       

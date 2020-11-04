@@ -13,7 +13,8 @@
     <main>
       <section class="painel-login">
         <div class="card">
-          <h1>Entre ou cadastre-se</h1>
+          <img src="./assets/logo.png" alt="Educa Bolso">
+          <h1>Fazer login</h1>
 
           <form action="autenticar-usuario.php" method="POST">
             <input type="text" name="email" placeholder="Email" />
@@ -22,12 +23,13 @@
             <button type="submit">Entrar</button>
           </form>
 
-          <a class="a" href="cadastro.php">Ainda não possui cadastro? <br> Clique aqui</a>
+          <a href="cadastro.php">Ainda não possui cadastro? Clique aqui</a>
         </div>
+        
       </section>
 
       <section class="painel-imagem">
-        <img src="./assets/educacao.jpg" alt="Login" />
+        <img src="./assets/calculator-background.svg" alt="Login" />
       </section>
     </main>
   </body>
