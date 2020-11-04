@@ -12,7 +12,7 @@
       <div class="content">
       <div class="info">
         <img src="./assets/logo.png" alt="Cadastro concluído!" />
-        <h1>Cadastro concluído!</h1>
+        <img src="./assets/success-check-icon.svg" alt="">
       </div>
 
       <a href="index.php">Fazer login</a>

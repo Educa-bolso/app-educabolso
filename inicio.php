@@ -16,10 +16,12 @@
     $valor = $_POST['valor'];
     $vencimento = $_POST['vencimento'];
 
+
     $sql = "insert into contasfixas (conta, valor, vencimento, user_id) values ('$conta', '$valor', '$vencimento', $user_id)";
 
     $connection->query($sql);
   }
+
 ?>
 
 <!DOCTYPE html>
@@ -41,9 +43,9 @@
     <div class="container-fluid">
       <div class="container position-relative">
           <header class="w-100 d-flex">
-                <a href="inicio.php">
-                  <img style="width: 80px; height: 80px" src="./assets/logo.png" alt="Menu" />
-                </a>
+              <a href="inicio.php">
+                <img style="width: 80px; height: 80px" src="./assets/logo.png" alt="Menu" />
+              </a>
               <div class="buscar">
                 <form action="">
                   <input
@@ -87,7 +89,7 @@
           </header>
 
           <div class="caixa-perfil position-absolute">
-          <span>Gastadora incontrolável</span>
+          <span>Gastador/a incontrolável</span>
             <a href="#">Meu perfil</a>
             <a href="#">Minhas conquistas</a>
             <a class="btn btn-danger" href="sair.php">Sair</a>
@@ -128,7 +130,7 @@
               
           </section>
 
-          <section class="contas-fixas w-100">
+          <section class="contas-fixas w-100 position-relative">
             <h4>Contas fixas</h4>
             <form action="" method="post">
                 <label for="conta">Conta:</label>
@@ -142,7 +144,8 @@
 
               <input type="submit" value="Salvar" />
             </form>
-
+            
+            
             <div class="card-contas">
               <h4>Contas cadastradas</h4>
 
@@ -183,7 +186,6 @@
           </section>
         </main>
     </div>
-
     <script src="./scripts/index.js"></script>
   </body>
 </html>

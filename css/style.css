@@ -27,6 +27,11 @@ input {
   border: none;
 }
 
+.alert {
+  top: 0;
+  right: 0;
+}
+
 /* 1 REM = 16px  */
 
 .container-fluid {

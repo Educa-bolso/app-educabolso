@@ -3,7 +3,7 @@
   session_start();
 
 
-  if (isset($_POST['email']) && isset($_POST['senha'])) {
+  if (strlen($_POST['email']) > 3 && strlen($_POST['senha']) > 3) {
     $email = $_POST['email'];
     $senha = md5($_POST['senha']);
 
@@ -11,12 +11,16 @@
 
     $result = $connection->query($sql);
 
-    $usuarios = mysqli_fetch_all($result);
+    $usuarios = mysqli_fetch_assoc($result);
 
-    $_SESSION['id'] = $usuarios[0][0];
-    $_SESSION['nome'] = $usuarios[0][1];
-    $_SESSION['email'] = $usuarios[0][2];
-    $_SESSION['senha'] = $usuarios[0][3];
+    if (!$usuarios) {
+      echo "<script>alert('Email ou senha estão incorretos!')</script>";
+    }
+
+    $_SESSION['id'] = $usuarios['id'];
+    $_SESSION['nome'] = $usuarios['nome'];
+    $_SESSION['email'] = $usuarios['email'];
+    $_SESSION['senha'] = $usuarios['senha'];
 
     header('Location: inicio.php');
   } else {
@@ -24,7 +28,6 @@
     <script>
       alert('Email ou senha inválidos!');
       location.href = 'index.php';
-    </script>
-  ";
+    </script>";
   }
 ?>

@@ -19,9 +19,19 @@
   margin: 0 auto;
 }
 
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info img + img {
+  width: 5rem;
+  margin-bottom: 2rem;
+}
+
 .info img {
   width: 300px;
-  margin: 0.4rem auto;
+  margin: 0.1rem auto;
 }
 
 .info h1 {
