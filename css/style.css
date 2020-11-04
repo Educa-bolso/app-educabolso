@@ -50,10 +50,6 @@ header {
 }
 
 /* === CAIXA PERFIL === */
-#conteudo-principal {
-  position: relative;
-}
-
 .caixa-perfil {
   width: 14rem;
   height: 10rem;
@@ -101,14 +97,16 @@ header {
 }
 
 .buscar {
-  width: 50%;
   margin: 0 1rem;
   text-align: center;
   position: relative;
 }
 
+.burcar form {
+  margin: 0 auto;
+}
+
 .buscar input {
-  width: 100%;
   padding: 4px 8px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 }
@@ -120,14 +118,23 @@ header {
 }
 
 .botoes {
-  width: 15%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.botoes a {
+  margin: 0 0.5rem;
+}
+
+.botoes a img {
+  width: 40px;
+}
+
 .minha-conta {
-  width: 10%;
+  margin-left: auto;
+  margin-right: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -284,6 +291,15 @@ main h3 {
 }
 
 /* === MEDIA QUERIES === */
+@media (min-width: 200px) and (max-width: 500px) {
+  .botoes > a {
+    display: none;
+  }
+
+  .card-info table.table {
+    width: 90%;
+  }
+}
 @media (min-width: 200px) and (max-width: 992px) {
   .buscar {
     display: none;

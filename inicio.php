@@ -41,33 +41,33 @@
     <div class="container-fluid">
       <div class="container position-relative">
           <header class="w-100 d-flex">
-              <div class="col-xl-2">
-                <a href="#">
+                <a href="inicio.php">
                   <img style="width: 80px; height: 80px" src="./assets/logo.png" alt="Menu" />
                 </a>
-              </div>
-              
+              <div class="buscar">
+                <form action="">
+                  <input
+                    type="text"
+                    name="buscar"
+                    id="buscar"
+                    placeholder="O que você está procurando?"
+                  />
 
-              <div class=" buscar d-sm-none d-md-none d-lg-block">
-                <input
-                  type="text"
-                  name="buscar"
-                  id="buscar"
-                  placeholder="O que você está procurando?"
-                />
-                <img src="./assets/search.svg" alt="Buscar" />
+                  <input class="btn btn-success" type="submit" value="Buscar">
+                </form>
               </div>
+                
 
-              <div class=" botoes">
+              <div class="botoes">
                 <a href="#">
-                  <img style="width: 40px"src="./assets/bate-papo.svg" alt="Chat" />
+                  <img src="./assets/bate-papo.svg" alt="Chat" />
                 </a>
               
                 <a href="#">
-                  <img style="width: 40px" src="./assets/nivel.svg" alt="Chat" />
+                  <img src="./assets/nivel.svg" alt="Chat" />
                 </a>
                 <a href="#">
-                  <img style="width: 40px" src="./assets/notificacao.svg" alt="Notificação" />
+                  <img src="./assets/notificacao.svg" alt="Notificação" />
                 </a>
               </div>
 
