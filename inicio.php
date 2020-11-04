@@ -38,9 +38,9 @@
     <title>Educa Bolso</title>
   </head>
   <body>
-    <div class="container-fluid vh-100">
+    <div class="container-fluid">
       <div class="container position-relative">
-          <header class="w-100">
+          <header class="w-100 d-flex">
               <div class="col-xl-2">
                 <a href="#">
                   <img style="width: 80px; height: 80px" src="./assets/logo.png" alt="Menu" />
@@ -72,7 +72,7 @@
               </div>
 
               <div class=" minha-conta">
-                <img src="./assets/avatar.jpg" alt="Foto de perfil" />
+                <img src="./assets/avatar.png" alt="Foto de perfil" />
                 <div class="informacao">
                   <strong>Eu</strong>
                   <button>
@@ -98,18 +98,26 @@
         <main class="container mt-4 w-md-12" >
           
           <section class="cards row w-100 ml-0">
-            <div class="card col-xl-6 col-lg-6 col-md-12 col-sm-12">
-              <h3>Quais são as suas contas fixas?</h3>
+            <div id="card-grande" class="card col-xl-6 col-lg-6 col-md-6 col-sm-12">
+              <h3 style="color: #7159c1">CONTAS FIXAS</h3>
 
-              <div class="image-card">
+              <div  class="image-card">
                 <img
                   src="./assets/img_calculator.svg"
                   alt="Quais são as sua contas fixas?"
                 />
               </div>
             </div>
-              <div class="card menores col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <h3>Quais seus planos para o futuro?</h3>
+              
+              <div id="menor" class="card menores col-xl-3 col-lg-3 col-md-3 col-sm-6 m-auto">
+                <h3>Aprenda a gerenciar o seu dinheiro!</h3>
+
+                <div class="image-card">
+                  <img src="./assets/future.svg" alt="Saiba Mais!" />
+                </div>
+              </div>
+              <div id="menor" class="card menores col-xl-3 col-lg-3 col-md-3 col-sm-6 m-auto">
+                <h3>Metas</h3>
                 <div class="image-card">
                   <img
                     src="./assets/plaining.svg"
@@ -117,35 +125,26 @@
                   />
                 </div>
               </div>
-              <div class="card menores col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <h3>Aprenda a controlar os seus gastos financeiros!</h3>
-
-                <div class="image-card">
-                  <img src="./assets/future.svg" alt="Saiba Mais!" />
-                </div>
-              </div>
               
           </section>
 
-          <section class="contas-fixas">
+          <section class="contas-fixas w-100">
             <h4>Contas fixas</h4>
-            <hr />
             <form action="" method="post">
-              <label for="conta">Conta:</label>
-              <input type="text" name="conta" id="conta" />
+                <label for="conta">Conta:</label>
+                <input type="text" name="conta" id="conta" />
+              
+                <label for="valor">Valor:</label>
+                <input type="text" name="valor" id="valor" />
 
-              <label for="valor">Valor:</label>
-              <input type="text" name="valor" id="valor" />
-
-              <label for="vencimento">Vencimento:</label>
-              <input type="date" name="vencimento" id="vencimento" />
+                <label for="vencimento">Vencimento:</label>
+                <input type="date" name="vencimento" id="vencimento" />
 
               <input type="submit" value="Salvar" />
             </form>
 
             <div class="card-contas">
-              <h5>Contas cadastradas</h5>
-              <hr />
+              <h4>Contas cadastradas</h4>
 
               <div class="card-info">
                 <table class="table border-0 table-bordered table-striped">

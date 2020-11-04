@@ -9,12 +9,14 @@
   </head>
   <body>
     <div class="container">
+      <div class="content">
       <div class="info">
         <img src="./assets/logo.png" alt="Cadastro concluído!" />
         <h1>Cadastro concluído!</h1>
       </div>
 
       <a href="index.php">Fazer login</a>
+      </div>
     </div>
   </body>
 </html>
