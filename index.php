@@ -23,8 +23,8 @@
           <h1>Fazer login</h1>
 
           <form action="autenticar-usuario.php" method="POST">
-            <input type="text" name="email" placeholder="Email" />
-            <input type="password" name="senha" placeholder="Senha" />
+            <input type="text" name="email" placeholder="Email" autocomplete="off" />
+            <input type="password" name="senha" placeholder="Senha" autocomplete="off"/>
 
             <button type="submit">Entrar</button>
           </form>

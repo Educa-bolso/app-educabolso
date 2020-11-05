@@ -20,7 +20,7 @@
     $sql = "insert into contasfixas (conta, valor, vencimento, user_id) values ('$conta', '$valor', '$vencimento', $user_id)";
 
     $connection->query($sql);
-  }
+  } 
 
 ?>
 
@@ -134,13 +134,13 @@
             <h4>Contas fixas</h4>
             <form action="" method="post">
                 <label for="conta">Conta:</label>
-                <input type="text" name="conta" id="conta" />
+                <input type="text" name="conta" id="conta"autocomplete="off" />
               
                 <label for="valor">Valor:</label>
-                <input type="text" name="valor" id="valor" />
+                <input type="text" name="valor" id="valor"autocomplete="off" />
 
                 <label for="vencimento">Vencimento:</label>
-                <input type="date" name="vencimento" id="vencimento" />
+                <input type="date" name="vencimento" id="vencimento"autocomplete="off" />
 
               <input type="submit" value="Salvar" />
             </form>
