@@ -7,11 +7,7 @@
     $senha = $_POST['senha'];
     $repetirSenha = $_POST['repetirSenha'];
 
-    if ($senha !== $repetirSenha) {
-      echo "<script>alert('As senhas não conferem.');
-      window.location.href = 'cadastro.php';
-      </script>";
-    }
+    
 
     $sql = "select email from usuarios where email = '$email'";
 
@@ -23,6 +19,10 @@
           alert('Este email já foi cadastrado!');   
         </script>";
        
+    } else if ($senha !== $repetirSenha) {
+      echo "<script>alert('As senhas não conferem.');
+      window.location.href = 'cadastro.php';
+      </script>";
     } else {
       $senhacripto = md5($senha);
 
@@ -31,9 +31,7 @@
       $connection->query($sql);
 
       echo "<script>window.location.href = 'cadastro-concluido.php';</script>";
-
     }
-
   }
 ?>
 
